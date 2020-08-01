@@ -21,11 +21,11 @@ def read_input():
     input_file. write(begin_time+" "+end_time+" "+duration);
     input_file.close()
     
-#Creating graphics
+# Creating graphics
   # Creating a New window
     new_master = tk.Toplevel(master)
     
-  #Labelling Important Points
+  # Labelling Important Points
     tk.Label(new_master, text="Beginning time:"+begin_time).grid(row=0)
     tk.Label(new_master, text="Ending time:"+end_time).grid(row=1)
     tk.Label(new_master, text="Number of days left:"+duration).grid(row=2)
@@ -33,7 +33,7 @@ def read_input():
                   
 
 
-#creates master
+# Creates master
 master = tk.Tk()
 
 
@@ -42,17 +42,17 @@ tk.Label(master, text="Beginning time:").grid(row=0)
 tk.Label(master, text="Ending time:").grid(row=1)
 tk.Label(master, text="Number of days left:").grid(row=2)
 
-# making input boxes
+# Making input boxes
 input1 = tk.Entry(master)
 input2 = tk.Entry(master)
 input3 = tk.Entry(master)
 
-#setting position of a box
+# Setting position of a box
 input1.grid(row=0, column=1)
 input2.grid(row=1, column=1)
 input3.grid(row=2, column=1)
 
-#making buttons and setting actions
+# Making buttons and setting actions
 tk.Button(master, text='Quit', command=master.quit).grid(row=3, column=1, sticky=tk.W,pady=4)
 tk.Button(master, text='Done', command=read_input).grid(row=3, column=2, sticky=tk.W, pady=4)
 
