@@ -33,7 +33,7 @@ def read_input():
                   
 
 
-# Creates master
+# Creating master
 master = tk.Tk()
 
 
