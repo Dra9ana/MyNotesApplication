@@ -4,21 +4,22 @@ def open_section(file_name)
     #open file where data is written
     file   = open(file_name)
     #make a window
-    master = tk.Toplevel()
+    new_master = tk.Toplevel()
     #set position of window(we shoudl see where we should set it)
     #read first line in file
     line   = file.readline()
     #i is index of row
     i      = 1
     #make first label
-    tk.Label(master, text=line).grid(row=0)
+    tk.Label(new_master, text=line).grid(row=0)
 
     # copy all lines from the file in window
     while line:
           line=file.readline()
           i=i+1;
-          tk.Label(master, text=line).grid(row=i)
+          tk.Label(new_master, text=line).grid(row=i)
     file.close()
+    new_master.mainloop()
     
 master = tk.Tk()
 # set window title
@@ -27,7 +28,7 @@ master.title("Notes")
 master.configure(width=500, height=300)
 # set window background color
 master.configure(bg='lightblue')
-master.mainloop()
+
 
 
 #New_Note = tk.Button(master, text="New Note", command)
