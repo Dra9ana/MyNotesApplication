@@ -4,7 +4,7 @@ def open_section(file_name)
     #open file where data is written
     file   = open(file_name)
     #make a window
-    master = tk.Tk()
+    master = tk.Toplevel()
     #set position of window(we shoudl see where we should set it)
     #read first line in file
     line   = file.readline()
