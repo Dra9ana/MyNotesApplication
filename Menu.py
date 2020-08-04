@@ -1,21 +1,18 @@
 import tkinter as tk
 
 master = tk.Tk()
-
-# declare the window
-window = tk.Tk()
 # set window title
-window.title("Notes")
+master.title("Notes")
 # set window width and height
-window.configure(width=500, height=300)
+master.configure(width=500, height=300)
 # set window background color
-window.configure(bg='lightblue')
-window.mainloop()
+master.configure(bg='lightblue')
+master.mainloop()
 
 
 #New_Note = tk.Button(master, text="New Note", command)
 Job = tk.Button (master, text="Job", command = open("Job_input.txt","r"), width=20);
-Job.grid(row=0, column=0)
+Job.grid(row=0, column=1)
 School = tk.Button (master, text="School", command = open("School_input.txt","r"), width=20);
 School.grid(row=1, column=0)
 FaF = tk.Button (master, text="Family and Friends", command = open("FaF_input.txt","r"), width=20);
