@@ -16,7 +16,7 @@ def read_input():
     days_off = input3.get()
      
      #writes data in file input.txt
-    input_file = open("input.txt","w");
+    input_file = open("Job_input.txt","w");
     input_file. write(begin_time+" "+end_time+" "+days_off);
     input_file.close()
      
