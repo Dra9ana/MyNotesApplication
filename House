@@ -1,6 +1,6 @@
 import tkinter as tk
 
-# Defining class for a Firends and family section
+# Defining class for a House section
 class Travel:
      def __init__(self, chore, start_date, start_time):
                   self.chore       = chore;
