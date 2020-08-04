@@ -1,6 +1,6 @@
 import tkinter as tk
 
-def open_section(file_name)
+def open_section(file_name):
     #open file where data is written
     file   = open(file_name)
     #make a window
