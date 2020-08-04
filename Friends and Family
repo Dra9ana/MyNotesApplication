@@ -19,7 +19,7 @@ def read_input():
     begin_time   = input3.get()
     
 # Opening/Closing a file and updating it
-    input_file = open("friendsAndFamily_input.txt","w");
+    input_file = open("FaF_input.txt","w");
     input_file. write(person+" "+type+" "+begin_date+" "+begin_time);
     input_file.close()
     
