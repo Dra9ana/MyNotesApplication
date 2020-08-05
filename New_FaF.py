@@ -1,7 +1,7 @@
 import tkinter as tk
 
 
-# Defining class for a School section
+# Defining class for a Friends and family section
 
 class School:
      def __init__(self, name, activity, date, time, duration, description):
