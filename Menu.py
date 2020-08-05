@@ -15,8 +15,8 @@ def open_section(file_name):
 
      # copy all lines from the file in window
      while line:
-           line=file.readline()
-           i=i+1;
+           line = file.readline()
+           i    = i+1;
            tk.Label(new_master, text=line).grid(row=i)
      file.close()
 
@@ -25,31 +25,23 @@ master = tk.Tk()
 # set window title
 master.title("Notes")
 # set window width, height and background color
-master.configure(width=500, height=300,bg='lightblue')
+master.geometry("500x300")
+master.configure(bg='lightblue')
 
 #New_Note = tk.Button(master, text="New Note", command)
-Job = tk.Button (master, text="Job", command = lambda: open_section("Job_input.txt"),width=20, bg='blue',fg='white')
+Job = tk.Button (master, text="Job", command = lambda: open_section("Job_input.txt"), width=20, bg='blue', fg='white')
 Job.grid(row=0, column=0)
-School = tk.Button (master, text="School", command = lambda: open_section("School_input.txt"),width=20, bg='blue',fg='white')
+School = tk.Button (master, text="School", command = lambda: open_section("School_input.txt"), width=20, bg='blue', fg='white')
 School.grid(row=1, column=0)
-FaF = tk.Button (master, text="Family and Friends", command = lambda: open_section("FaF_input.txt"),width=20, bg='blue',fg='white')
+FaF = tk.Button (master, text="Family and Friends", command = lambda: open_section("FaF_input.txt"), width=20, bg='blue', fg='white')
 FaF.grid(row=2, column=0)
-House = tk.Button (master, text="House", command = lambda: open_section("House_input.txt"), width=20, bg='blue',fg='white');
+House = tk.Button (master, text="House", command = lambda: open_section("House_input.txt"), width=20, bg='blue', fg='white');
 House.grid(row=3, column=0)
-Travel = tk.Button (master, text="Travel", command = lambda: open_section("Travel_input.txt"), width=20, bg='blue',fg='white');
+Travel = tk.Button (master, text="Travel", command = lambda: open_section("Travel_input.txt"), width=20, bg='blue', fg='white');
 Travel.grid(row=4, column=0)
 Extracurricular = tk.Button (master, text="Extracirricular", command = lambda:open_section("Extracurricular_input.txt"), width=20, bg='blue', fg='white');
 Extracurricular.grid(row=5, column=0)
-Passwords = tk.Button (master, text="Passwords", command = lambda: open_section("Passwords_input.txt"), width=20, bg='blue',fg='white');
+Passwords = tk.Button (master, text="Passwords", command = lambda: open_section("Passwords_input.txt"), width=20, bg='blue', fg='white');
 Passwords.grid(row=5, column=0)
-
-#Job.pack()
-#School.pack()
-#FaF.pack()
-#House.pack()
-#Travel.pack()
-#Extracurricular.pack()
-#Passwords.pack()
-
 
 master.mainloop()
