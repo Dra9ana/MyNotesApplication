@@ -21,10 +21,17 @@ def open_section(file_name):
            i=i+1;
            list_box.insert(i, line)
 
-     list_box.grid(row=5)
-     tk.Button(master, text="Delete", width='5',bg='blue', fg='white').grid(row=0,column=7)
-     tk.Button(master, text="New Note",width='5', bg='blue', fg='white').grid(row=1,column=7)
-     tk.Button(master, text="Edit",width='5', bg='blue', fg='white').grid(row=2,column=7)
+     list_box.place(x=160,y=0)
+
+     deln = tk.Button(master, text="Delete", width='5',bg='blue', fg='white')
+     addn = tk.Button(master, text="New Note",width='5', bg='blue', fg='white')
+     edit = tk.Button(master, text="Edit",width='5', bg='blue', fg='white')
+
+     deln.place(x=300,y=20)
+     addn.place(x=300,y=40)
+     edit.place(x=300,y=60)
+
+
 
      file.close()
 
