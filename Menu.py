@@ -28,19 +28,19 @@ master.title("Notes")
 master.configure(width=500, height=300,bg='lightblue')
 
 #New_Note = tk.Button(master, text="New Note", command)
-Job = tk.Button (master, text="Job", command = open_section("Job_input.txt"),width=20, bg='blue',fg='white')
-Job.grid(row=0, column=1)
-School = tk.Button (master, text="School", command = open_section("School_input.txt"),width=20, bg='blue',fg='white')
+Job = tk.Button (master, text="Job", command = lambda: open_section("Job_input.txt"),width=20, bg='blue',fg='white')
+Job.grid(row=0, column=0)
+School = tk.Button (master, text="School", command = lambda: open_section("School_input.txt"),width=20, bg='blue',fg='white')
 School.grid(row=1, column=0)
-FaF = tk.Button (master, text="Family and Friends", command = open_section("FaF_input.txt"), bg='blue',fg='white',width=20)
+FaF = tk.Button (master, text="Family and Friends", command = lambda: open_section("FaF_input.txt"),, width=20 bg='blue',fg='white')
 FaF.grid(row=2, column=0)
-House = tk.Button (master, text="House", command = open_section("House_input.txt"), bg='blue',fg='white',width=20);
+House = tk.Button (master, text="House", command = lambda: open_section("House_input.txt"), width=20 ,bg='blue',fg='white');
 House.grid(row=3, column=0)
-Travel = tk.Button (master, text="Travel", command = open_section("Travel_input.txt"), bg='blue',fg='white',width=20);
+Travel = tk.Button (master, text="Travel", command = lambda: open_section("Travel_input.txt"), width=20, bg='blue',fg='white');
 Travel.grid(row=4, column=0)
-Extracurricular = tk.Button (master, text="Extracirricular", command = open_section("Extracurricular_input.txt"), bg='blue', fg='white',width=20);
+Extracurricular = tk.Button (master, text="Extracirricular", lambda: command = open_section("Extracurricular_input.txt"), width=20, bg='blue', fg='white');
 Extracurricular.grid(row=5, column=0)
-Passwords = tk.Button (master, text="Passwords", command = open_section("Passwords_input.txt"), bg='blue',fg='white', width=20);
+Passwords = tk.Button (master, text="Passwords", command = lambda: open_section("Passwords_input.txt"), width=20, bg='blue',fg='white');
 Passwords.grid(row=5, column=0)
 
 #Job.pack()
