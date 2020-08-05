@@ -1,9 +1,9 @@
 import tkinter as tk
 
 
-# Defining class for a School section
+# Defining class for a House section
 
-class School:
+class House:
      def __init__(self, name, activity, date, time, description):
                   self.name        = name;
                   self.activity    = activity;
