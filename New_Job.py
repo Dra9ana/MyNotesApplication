@@ -21,6 +21,12 @@ def read_input():
 
 
      #writes data in database
+    conn = open.database("Notes.db")
+    conn.execute("INSERT INTO Job (Topic, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?)", 
+                                                  (topic, date, time, duration, description)) 
+  
+    conn.commit() 
+     
      
      #creates window?
     new_master = tk.Toplevel(master)
