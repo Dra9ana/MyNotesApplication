@@ -2,14 +2,14 @@ import tkinter as tk
 
 def open_section(file_name):
      #open file where data is written
-     file   = open(file_name)
+     file = open(file_name)
      #make a window
      new_master = tk.Toplevel()
      #set position of window(we shoudl see where we should set it)
      #read first line in file
-     line   = file.readline()
+     line = file.readline()
      #i is index of row
-     i      = 1
+     i = 1
      #make first label
      tk.Label(new_master, text=line).grid(row=0)
 
@@ -32,13 +32,13 @@ Job = tk.Button (master, text="Job", command = lambda: open_section("Job_input.t
 Job.grid(row=0, column=0)
 School = tk.Button (master, text="School", command = lambda: open_section("School_input.txt"),width=20, bg='blue',fg='white')
 School.grid(row=1, column=0)
-FaF = tk.Button (master, text="Family and Friends", command = lambda: open_section("FaF_input.txt"),, width=20 bg='blue',fg='white')
+FaF = tk.Button (master, text="Family and Friends", command = lambda: open_section("FaF_input.txt"),width=20, bg='blue',fg='white')
 FaF.grid(row=2, column=0)
-House = tk.Button (master, text="House", command = lambda: open_section("House_input.txt"), width=20 ,bg='blue',fg='white');
+House = tk.Button (master, text="House", command = lambda: open_section("House_input.txt"), width=20, bg='blue',fg='white');
 House.grid(row=3, column=0)
 Travel = tk.Button (master, text="Travel", command = lambda: open_section("Travel_input.txt"), width=20, bg='blue',fg='white');
 Travel.grid(row=4, column=0)
-Extracurricular = tk.Button (master, text="Extracirricular", lambda: command = open_section("Extracurricular_input.txt"), width=20, bg='blue', fg='white');
+Extracurricular = tk.Button (master, text="Extracirricular", command = lambda:open_section("Extracurricular_input.txt"), width=20, bg='blue', fg='white');
 Extracurricular.grid(row=5, column=0)
 Passwords = tk.Button (master, text="Passwords", command = lambda: open_section("Passwords_input.txt"), width=20, bg='blue',fg='white');
 Passwords.grid(row=5, column=0)
