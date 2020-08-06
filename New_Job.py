@@ -3,7 +3,7 @@
 import tkinter as tk
 
 
-# Defining a class for a Job section
+# Defining a class for the Job section
 class Job:
      def __init__(self, topic, date, time, duration, description):
                   self.topic       = topic;
