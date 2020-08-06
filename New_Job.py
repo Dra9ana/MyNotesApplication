@@ -30,7 +30,7 @@ def read_input():
   
     conn.commit() 
      
-     
+# Creating graphics
     # Creating a window
     new_master = tk.Toplevel(master)
     # Creating labels and positioning them
