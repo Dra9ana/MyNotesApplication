@@ -11,27 +11,25 @@ def open_section(file_name):
      #make dictionary
      d={}
      #read first line of code
-     line = file.readline()
+     list = file.readlines()
      #separate note name from the rest
-     (key,value)=line.split(",")
+     (key,value)=list[0].split(",")
      #set dictionary parameters
      d[key]=value
 
      #i is index of row
-     i = 2
+     i = 0
      #make first list raw
      list_box.insert(i, key)
 
      # copy all note names from the file in window
-     while line:
-           #read line
-           line=file.readline()
+     while i<len(list):
            #increment index
            i=i+1
            #put name of note in the list
            list_box.insert(i,key)
            #seperate name from other features
-           (key,value)=line.split(",")
+           (key,value)=list[i].split(",")
            #set dictionary parameters
            d[key]=value
      # set position of listbox
@@ -52,12 +50,9 @@ def open_section(file_name):
      #get the selected name
      key=get(first=index,last=none)
      #find features in dictionary and split them
-     list=d[key].split(";")
+     list1=d[key].split(";")
      #get section name from the file_name and call outpu function
-     file_name[1:-10].output(master,list)
-
-
-
+     file_name[:-10].output(master,list1)
      file.close()
 
 
