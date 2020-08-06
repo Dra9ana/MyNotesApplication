@@ -1,3 +1,5 @@
+# Travel section
+
 import tkinter as tk
 
 
@@ -24,7 +26,11 @@ def read_input():
     duration    = input5.get()
     description = input6.get()
 
-# DATABASE STUFF
+    # Storing data in a Database
+    conn = open.database("Notes.db")
+    conn.execute("INSERT INTO Travel (Name, Destination, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?)", 
+                                                  (name, destination, date, time, duration, description)) 
+
 
 # Creating graphics
   # Creating a New window
