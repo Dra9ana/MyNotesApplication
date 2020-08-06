@@ -1,3 +1,5 @@
+# School section
+
 import tkinter as tk
 
 
@@ -7,7 +9,7 @@ class School:
      def __init__(self, topic, subject, activity, date, time, duration, description):
                   self.topic       = topic;
                   self.subject     = subject;
-                  self.activity        = activity;
+                  self.activity    = activity;
                   self.date        = date;
                   self.time        = time;
                   self.duration    = duration;
@@ -26,7 +28,12 @@ def read_input():
     duration    = input6.get()
     description = input7.get()
 
-# DATABASE STUFF
+    # Storing data in a Database
+    conn = open.database("Notes.db")
+    conn.execute("INSERT INTO School (Topic, Subject, Activity, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?, ?)", 
+                                                  (topic, subject, activity, date, time, duration, description)) 
+  
+    conn.commit() 
 
 # Creating graphics
   # Creating a New window
