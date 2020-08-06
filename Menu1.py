@@ -18,18 +18,18 @@ def open_section(file_name):
      d[key]=value
 
      #i is index of row
-     i = 0
+     i = 1
      #make first list raw
      list_box.insert(i, key)
 
      # copy all note names from the file in window
      while i<len(list):
-           #increment index
-           i=i+1
            #put name of note in the list
            list_box.insert(i,key)
            #seperate name from other features
            (key,value)=list[i].split(",")
+           #increment index
+           i=i+1
            #set dictionary parameters
            d[key]=value
      # set position of listbox
