@@ -1,7 +1,9 @@
+# Extracurricular section
+
 import tkinter as tk
 
 
-# Defining class for a Extracurricular section
+# Defining a class for the Extracurricular section
 
 class Travel:
      def __init__(self, name, activity, date, time, duration, description):
@@ -24,7 +26,10 @@ def read_input():
     duration    = input5.get()
     description = input6.get()
 
-# DATABASE STUFF
+    # Storing data in a Database
+    conn = open.database("Notes.db")
+    conn.execute("INSERT INTO Extracurricular (Name, Activity, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?)", 
+                                                  (name, activity, date, time, duration, description)) 
 
 # Creating graphics
   # Creating a New window
