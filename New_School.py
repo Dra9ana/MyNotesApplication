@@ -3,7 +3,7 @@
 import tkinter as tk
 
 
-# Defining class for a School section
+# Defining a class for the School section
 
 class School:
      def __init__(self, topic, subject, activity, date, time, duration, description):
