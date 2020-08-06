@@ -28,7 +28,7 @@ def read_input():
 
     # Storing data in a Database
     conn = open.database("Notes.db")
-    conn.execute("INSERT INTO Extracurricular (Name, Activity, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?)", 
+    conn.execute("INSERT INTO Extracurricular (Name, Activity, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?, ?)", 
                                                   (name, activity, date, time, duration, description)) 
 
 # Creating graphics
