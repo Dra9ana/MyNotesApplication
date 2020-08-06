@@ -1,7 +1,9 @@
+# House Section
+
 import tkinter as tk
 
 
-# Defining class for a House section
+# Defining a class for the House section
 
 class House:
      def __init__(self, name, activity, date, time, description):
@@ -22,7 +24,11 @@ def read_input():
     time        = input4.get()
     description = input5.get()
 
-# DATABASE STUFF
+    # Storing data in a Database
+    conn = open.database("Notes.db")
+    conn.execute("INSERT INTO Extracurricular (Name, Activity, Date, Time, Description) VALUES(?, ?, ?, ?, ?)", 
+                                                  (name, activity, date, time, description)) 
+
 
 # Creating graphics
   # Creating a New window
