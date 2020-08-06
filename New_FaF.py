@@ -1,7 +1,9 @@
+# Friends and Family section
+
 import tkinter as tk
 
 
-# Defining class for a Friends and family section
+# Defining a class for the Friends and family section
 
 class School:
      def __init__(self, name, activity, date, time, duration, description):
@@ -24,7 +26,11 @@ def read_input():
     duration    = input5.get()
     description = input6.get()
 
-# DATABASE STUFF
+    # Storing data in a Database
+    conn = open.database("Notes.db")
+    conn.execute("INSERT INTO FaF (Name, Activity, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?)", 
+                                                  (name, activity, date, time, duration, description)) 
+
 
 # Creating graphics
   # Creating a New window
