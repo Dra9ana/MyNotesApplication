@@ -1,6 +1,7 @@
 from tkinter import *
 import tkinter as tk
 import Job
+from Job import *
 
 
 def open_section(file_name):
@@ -46,13 +47,16 @@ def open_section(file_name):
      edit.place(x=400,y=60)
 
      #get the index of selected item
-     index=list_box.currselection()
-     #get the selected name
-     key=get(first=index,last=none)
-     #find features in dictionary and split them
-     list1=d[key].split(";")
-     #get section name from the file_name and call outpu function
-     file_name[:-10].output(master,list1)
+     list_box.selection_set(first=0)
+     while(1):
+          index=list_box.curselection()
+          #get the selected name
+          key=list_box.get(first=index,last=None)
+          #find features in dictionary and split them
+          list1=d[key].split(";")
+          #get section name from the file_name and call outpu function
+          #file_name[:-10]
+          Job.output(master,list1)
      file.close()
 
 
