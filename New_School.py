@@ -2,7 +2,6 @@
 
 import tkinter as tk
 
-
 # Defining a class for the School section
 
 class School:
