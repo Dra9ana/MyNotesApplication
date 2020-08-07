@@ -1,3 +1,5 @@
+# A function that stores new notes in a database
+
 import sqlite3
 
 def New_Notes(s, a): 
