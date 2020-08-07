@@ -25,9 +25,7 @@ def read_input():
     description = input5.get()
 
     # Storing data in a Database
-    conn = open.database("Notes.db")
-    conn.execute("INSERT INTO Extracurricular (Name, Activity, Date, Time, Description) VALUES(?, ?, ?, ?, ?)", 
-                                                  (name, activity, date, time, description)) 
+    New_Notes('House', [name, activity, date, time, description])
 
 
 # Creating graphics
