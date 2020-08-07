@@ -24,11 +24,7 @@ def read_input():
 
 
     # Storing data in a Database
-    conn = open.database("Notes.db")
-    conn.execute("INSERT INTO Job (Topic, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?)", 
-                                                  (topic, date, time, duration, description)) 
-  
-    conn.commit() 
+    New_Notes('Job', [topic, date, time, duration, description])
      
 # Creating graphics
     # Creating a window
