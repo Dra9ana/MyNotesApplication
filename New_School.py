@@ -28,9 +28,7 @@ def read_input():
     description = input7.get()
 
     # Storing data in a Database
-    conn = open.database("Notes.db")
-    conn.execute("INSERT INTO School (Topic, Subject, Activity, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?, ?)", 
-                                                  (topic, subject, activity, date, time, duration, description)) 
+    New_Notes('School', [topic, subject, activity, date, time, duration, description])
   
     conn.commit() 
 
