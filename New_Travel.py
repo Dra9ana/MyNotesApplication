@@ -27,10 +27,7 @@ def read_input():
     description = input6.get()
 
     # Storing data in a Database
-    conn = open.database("Notes.db")
-    conn.execute("INSERT INTO Travel (Name, Destination, Date, Time, Duration, Description) VALUES(?, ?, ?, ?, ?, ?)", 
-                                                  (name, destination, date, time, duration, description)) 
-
+    New_Notes('Travel', [name, destination, date, time, duration, description])
 
 # Creating graphics
   # Creating a New window
