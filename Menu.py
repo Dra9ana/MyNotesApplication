@@ -1,3 +1,5 @@
+# CREATE MENU/MAIN PAGE
+
 from tkinter import *
 import tkinter as tk
 import Open_Section as os
