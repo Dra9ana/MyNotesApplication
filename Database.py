@@ -1,3 +1,4 @@
+# CREATING A DATABASE
 import sqlite3
 
 # Create database
