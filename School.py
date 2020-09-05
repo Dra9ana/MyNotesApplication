@@ -1,7 +1,5 @@
 # SCHOOL SECTION
 
-# Save as: School
-
 from tkinter import *
 import tkinter as tk
 import New_Notes
