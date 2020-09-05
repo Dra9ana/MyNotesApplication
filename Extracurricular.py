@@ -1,7 +1,5 @@
 # EXTRACURRICULAR SECTION
 
-# Save as: Extracurricular
-
 from tkinter import *
 import tkinter as tk
 import New_Notes
