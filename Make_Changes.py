@@ -1,3 +1,6 @@
+# MAKE CHANGES 
+# "Main code" for Deleting, Editing and Creating new notes 
+
 import sqlite3
 import Delete
 import Job
@@ -9,7 +12,7 @@ import Travel
 import Passwords
 import Extracurricular
 
-#DELETE
+# DELETE
 def Delete_Note(section, list_box, indexes_list):
 
     # Get selected rows from listbox
@@ -24,7 +27,7 @@ def Delete_Note(section, list_box, indexes_list):
 # EDIT
 def Edit_Note(section, note_id, a):
 
-    #Connect to database
+    # Connect to database
     conn = sqlite3.connect('Notes.db')
     # Update note
     print("Usla u update")
