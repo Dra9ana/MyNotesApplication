@@ -1,7 +1,5 @@
 # HOUSE SECTION
 
-# Save as: House
-
 from tkinter import *
 import tkinter as tk
 import New_Notes
