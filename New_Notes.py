@@ -1,7 +1,5 @@
 # CREATE A NEW NOTE
 
-# Save as: New_Notes
-
 import sqlite3
 
 # Store note in database
