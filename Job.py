@@ -1,4 +1,4 @@
-# Job section
+# JOB SECTION
 from tkinter import *
 import tkinter as tk
 import New_Notes
@@ -7,7 +7,7 @@ import Query
 
 # Read input
 def read_input(master, input1, input2, input3, input4, input5, list_box, indexes_list):
-    # Getting attributes from input boxes and storing them
+    # Get attributes from input boxes and storing them
     topic       = input1.get()
     date        = input2.get()
     time        = input3.get()
@@ -15,7 +15,7 @@ def read_input(master, input1, input2, input3, input4, input5, list_box, indexes
     description = input5.get()
 
 
-    # Stor data in a Database
+    # Store data in a Database
     id = New_Notes.new_notes('Job', [topic, date, time, duration, description])
     # Output new note on listbox
     list_box.insert(tk.END, topic)
@@ -42,7 +42,7 @@ def new_note (list_box, indexes_list):
     # Create new window
     master=tk.Toplevel()
 
-    # Creating labels with descriptions for a Job section
+    # Create labels with descriptions for a Job section
     tk.Label(master, text="Job notes:").grid(row=0)
     tk.Label(master, text="Topic:").grid(row=1)
     tk.Label(master, text="Date:").grid(row=2)
