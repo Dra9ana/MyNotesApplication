@@ -1,7 +1,5 @@
 # JOB SECTION
 
-# Save as: Job 
-
 from tkinter import *
 import tkinter as tk
 import New_Notes
