@@ -1,6 +1,7 @@
 # CREATE A DATABASE
 
-# Save as Database
+# Save as: Database
+
 import sqlite3
 
 # Create database
