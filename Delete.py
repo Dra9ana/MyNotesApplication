@@ -1,7 +1,5 @@
 # DELETE A NOTE
 
-# Save as: Delete
-
 import sqlite3
 
 # Delete section from database
