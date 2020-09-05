@@ -1,3 +1,5 @@
+# OPENS A SECTION YOU'VE CHOSEN 
+
 import tkinter as tk
 import Job
 import FaF
