@@ -1,4 +1,4 @@
-# School section
+# SCHOOL SECTION
 from tkinter import *
 import tkinter as tk
 import New_Notes
@@ -8,7 +8,7 @@ import Query
 # Read input
 def read_input(master, input1, input2, input3, input4, input5, input6, input7, list_box, indexes_list):
 
-# Reading information from the input
+# Read information from the input
     topic       = input1.get()
     subject     = input2.get()
     activity    = input3.get()
@@ -17,7 +17,7 @@ def read_input(master, input1, input2, input3, input4, input5, input6, input7, l
     duration    = input6.get()
     description = input7.get()
 
-    # Storing data in a Database
+    # Store data in a Database
     id = New_Notes.new_notes('School', [topic, subject, activity, date, time, duration, description])
     # Output new note on listbox
     list_box.insert(tk.END, topic)
@@ -33,7 +33,7 @@ def output_section(master, list_box, indexes_list):
         # Set column index and its relative weight to distributeadditional space between
         master.grid_columnconfigure(2, weight=1)
 
-        # Labelling Important Points
+        # Label Important Points
         tk.Label(master, text="Topic:"+s[1], width=20, height=2).grid(row=1, column=2)
         tk.Label(master, text="Subject:"+s[2], width=20, height=2).grid(row=2, column=2)
         tk.Label(master, text="Activity:"+s[3], width=20, height=2).grid(row=3, column=2)
@@ -45,10 +45,10 @@ def output_section(master, list_box, indexes_list):
 # Make window for input
 def new_note (list_box, indexes_list):
 
-    # Creating master
+    # Create master
     master = tk.Tk()
 
-    # Making three labels for description of School section
+    # Make three labels for description of School section
     tk.Label(master, text="School notes:").grid(row=0)
     tk.Label(master, text="Topic:").grid(row=1)
     tk.Label(master, text="Subject:").grid(row=2)
@@ -58,7 +58,7 @@ def new_note (list_box, indexes_list):
     tk.Label(master, text="Duration:").grid(row=6)
     tk.Label(master, text="Description:").grid(row=7)
 
-    # Making input boxes
+    # Make input boxes
     input1 = tk.Entry(master)
     input2 = tk.Entry(master)
     input3 = tk.Entry(master)
@@ -67,7 +67,7 @@ def new_note (list_box, indexes_list):
     input6 = tk.Entry(master)
     input7 = tk.Entry(master)
 
-    # Setting position of a box
+    # Set position of a box
     input1.grid(row=1, column=1)
     input2.grid(row=2, column=1)
     input3.grid(row=3, column=1)
@@ -76,6 +76,6 @@ def new_note (list_box, indexes_list):
     input6.grid(row=6, column=1)
     input7.grid(row=7, column=1)
 
-    # Making buttons and setting actions
+    # Make buttons and setting actions
     tk.Button(master, text='Quit', command=master.quit).grid(row=8, column=1, sticky=tk.W,pady=4)
     tk.Button(master, text='Done', command=lambda:read_input(master, input1, input2, input3, input4, input5, input6, input7, list_box, indexes_list)).grid(row=8, column=2, sticky=tk.W, pady=4)
