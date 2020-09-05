@@ -1,5 +1,7 @@
 # FRIENDS AND FAMILY SECTION
 
+# Save as: FaF
+
 from tkinter import *
 import tkinter as tk
 import New_Notes
