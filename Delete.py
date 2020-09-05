@@ -1,9 +1,10 @@
+# DELETE A NOTE
 import sqlite3
 
-# Deleting section from database
+# Delete section from database
 def delete(s, i):
 
-    #  Connect to database
+    # Connect to database
     conn   = sqlite3.connect('Notes.db')
     # Open coursor
     cursor = conn.cursor()
@@ -23,7 +24,7 @@ def delete(s, i):
     elif(s == 'House'):
          cursor.execute("DELETE FROM House WHERE generated_id = ?",(i,) )
 
-    #Commit your changes in the database
+    # Commit your changes in the database
     conn.commit()
     # Close database
     conn.close()
