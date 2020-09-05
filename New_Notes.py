@@ -1,3 +1,4 @@
+# CREATE A NEW NOTE
 import sqlite3
 
 # Store note in database
