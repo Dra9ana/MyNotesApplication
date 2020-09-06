@@ -1,5 +1,4 @@
 # DELETE A NOTE
-
 import sqlite3
 
 # Delete section from database
@@ -24,6 +23,8 @@ def delete(s, i):
          cursor.execute("DELETE FROM Passwords WHERE generated_id = ?",(i,) )
     elif(s == 'House'):
          cursor.execute("DELETE FROM House WHERE generated_id = ?",(i,) )
+    elif(s == 'Expences'):
+         cursor.execute("DELETE FROM Expences WHERE generated_id = ?",(i,) )
 
     # Commit your changes in the database
     conn.commit()
