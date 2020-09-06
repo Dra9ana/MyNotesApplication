@@ -11,6 +11,7 @@ import School
 import Travel
 import Passwords
 import Extracurricular
+import Expences
 
 # DELETE
 def Delete_Note(section, list_box, indexes_list):
@@ -27,7 +28,7 @@ def Delete_Note(section, list_box, indexes_list):
 # EDIT
 def Edit_Note(section, note_id, a):
 
-    # Connect to database
+    #Connect to database
     conn = sqlite3.connect('Notes.db')
     # Update note
     print("Usla u update")
@@ -52,3 +53,7 @@ def Add_Note(section, list_box, indexes):
            f = Passwords.new_note(list_box, indexes)
     elif(section == 'House'):
            f = House.new_note(list_box, indexes)
+    elif(section == 'Expenes'):
+           f = Expences.new_note(list_box, indexes)
+    elif(section == 'Allowance'):
+           f = Expences.new_note(list_box, indexes)
