@@ -25,7 +25,9 @@ Travel = tk.Button (master, text="Travel", command = lambda:os.open_section(mast
 Travel.grid(row=4, column=0)
 Extracurricular = tk.Button (master, text="Extracirricular", command = lambda:os.open_section(master,"Extracurricular"), width = 20, bg = 'white', fg = 'black');
 Extracurricular.grid(row=5, column=0)
+Expences = tk.Button (master, text="Expences", command = lambda:os.open_section(master,"Expences"), width = 20, bg = 'white', fg = 'black');
+Expences.grid(row=6, column=0)
 Passwords = tk.Button (master, text="Passwords", command = lambda:os.open_section(master,"Passwords"), width = 20, bg = 'white', fg = 'black');
-Passwords.grid(row=5, column=0)
+Passwords.grid(row=7, column=0)
 
 master.mainloop()
