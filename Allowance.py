@@ -25,6 +25,21 @@ def read_input(master, input1, input2, input3, input4, input5, list_box, indexes
     # Store data in a Database
     # OVDE TREBA DA SE POZOVE UPDATE FUNKCIJA
 
+# Output section after clicking on button
+#def output_section(master, list_box, indexes_list):
+#
+ #    s = Query.get_row("New Expences",list_box,indexes_list)
+  #   if(s != []):
+   #    # Set column index and its relative weight to distributeadditional space between
+    #   master.grid_columnconfigure(2, weight=1)
+     #  # Make labels and position them
+      # l1 = tk.Label(master, text="Food:"+s[1], width=20, height=2).grid(row=1, column=2)
+       #l2 = tk.Label(master, text="Clothes:"+s[2], width=20, height=2).grid(row=2, column=2)
+       #l3 = tk.Label(master, text="Bills:"+s[3], width=20, height=2).grid(row=3, column=2)
+       #l4 = tk.Label(master, text="Direct Debts:"+s[4], width=20, height=2).grid(row=4, column=2)
+       #l5 = tk.Label(master, text="Other:"+s[5], width=20, height=2).grid(row=5, column=2)
+       #l6 = tk.Label(master, text="Total:"+s[5], width=20, height=2).grid(row=6, column=2)
+
 # Make window for input
 def new_note (list_box, indexes_list):
 
@@ -57,5 +72,5 @@ def new_note (list_box, indexes_list):
 
 
     # Make buttons and setting actions
-    tk.Button(master, text='Quit', command=master.quit).grid(row=8, column=2, sticky=tk.W, pady=4)
+    tk.Button(master, text='Quit', command=master.destroy).grid(row=8, column=2, sticky=tk.W, pady=4)
     tk.Button(master, text='Done', command=lambda:read_input(master, input1, input2, input3, input4, input5, list_box, indexes_list)).grid(row=8, column=3, sticky=tk.W, pady=4)
