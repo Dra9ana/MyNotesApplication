@@ -9,6 +9,9 @@ import School
 import Travel
 import Passwords
 import Extracurricular
+import Expences
+import Allowance
+import Balance
 
 # Handle event
 class Handler:
@@ -42,10 +45,16 @@ def f(o):
              f = Passwords.output_section(o.master, o.list_box, o.indexes)
       elif(o.section == 'House'):
              f = House.output_section(o.master, o.list_box, o.indexes)
+      elif(o.section == 'Expences'):
+             f = Expences.output_section(o.master, o.list_box, o.indexes)
+      #elif(o.section == 'Allowance'):
+       #      f = Allowance.output_section(o.master, o.list_box, o.indexes)
+      elif(o.section == 'Balance'):
+             f = Balance.output_section(o.master, o.list_box, o.indexes)
 
 
 def open(section, master, list_box, indexes_list):
          # Create new hanler
-         obj = Handler(f,section,master,list_box,indexes_list)
+         obj = Handler(f, section, master, list_box, indexes_list)
          # Call callback when some listbox item is selected
-         list_box.bind('<<ListboxSelect>>',obj.callback)
+         list_box.bind('<<ListboxSelect>>', obj.callback)
