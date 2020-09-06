@@ -41,7 +41,7 @@ def output_section(master, list_box, indexes_list):
 def new_note (list_box, indexes_list):
 
     # Create new window
-    master=tk.Toplevel()
+    master=tk.Toplevel() 
 
     # Create labels with descriptions for a Job section
     tk.Label(master, text="Job notes:").grid(row=0)
