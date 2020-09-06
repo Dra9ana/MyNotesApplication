@@ -1,4 +1,5 @@
 # DELETE A NOTE
+
 import sqlite3
 
 # Delete section from database
