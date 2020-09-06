@@ -12,6 +12,7 @@ import Extracurricular
 import Expences
 import Allowance
 import Balance
+import To_do
 
 # Handle event
 class Handler:
@@ -51,6 +52,8 @@ def f(o):
        #      f = Allowance.output_section(o.master, o.list_box, o.indexes)
       elif(o.section == 'Balance'):
              f = Balance.output_section(o.master, o.list_box, o.indexes)
+      elif(o.section == 'To_do'):
+             f = To_do.output_section(o)
 
 
 def open(section, master, list_box, indexes_list):
