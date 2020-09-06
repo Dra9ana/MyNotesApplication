@@ -15,7 +15,7 @@ def open_section(master, section):
      # If there is no selected items, list of indexes should be empty
      indexes_list = []
      # Make listbox
-     list_box     = Listbox(master)
+     list_box     = Listbox(master, height=13, width=45)
      # Read rows from database
      rows         = Query.select_name(section)
 
@@ -27,7 +27,7 @@ def open_section(master, section):
            indexes_list.append(row[0])
 
      # Set position of listbox
-     list_box.place(x = 160, y = 0)
+     list_box.place(x = 150, y = 0)
      # Enable user to select multiple items
      list_box.config(selectmode = MULTIPLE)
      # Output rows on the main window when item is selected
@@ -37,11 +37,19 @@ def open_section(master, section):
      list_box.event_generate("<<ListboxSelect>>")
 
      # Make buttons
-     deln = tk.Button(master, text="Delete", command=lambda:Delete_Note(section, list_box, indexes_list), width='8',bg='white', fg='black')
-     addn = tk.Button(master, text="New Note",command=lambda:Add_Note(section, list_box, indexes_list),width='8', bg='white', fg='black')
-     edit = tk.Button(master, text="Edit",command=lambda:Edit_Note(section, master),width='8', bg='white', fg='black')
-
+     deln = tk.Button(master, text="Delete", command=lambda:Delete_Note(section, list_box, indexes_list), width='12',bg='white', fg='black')
+     addn = tk.Button(master, text="New Note",command=lambda:Add_Note(section, list_box, indexes_list),width='12', bg='white', fg='black')
+     edit = tk.Button(master, text="Edit",command=lambda:Edit_Note(section, master),width='12', bg='white', fg='black')
+     
+     if(section=='Expences'):
+         alw = tk.Button(master, text="Allowance", command=lambda:os.Add_Note("Allowance", list_box, idexes_list), width='12', bg='white', fg='black')
+         bln = tk.Button(master, text="See Balance", command=lambda:os.open_section(master, "Balance"), width='12', bg='white', fg='black')
+         
+         alw.place(x = 425.0, y = 60.0)
+         bln.place(x = 425.0, y = 80.0)
+        
+        
      # Set places for buttons
-     deln.place(x = 800.0,y = 20.0)
-     addn.place(x = 800.0,y = 40.0)
-     edit.place(x = 800.0,y = 60.0)
+     deln.place(x = 425.0, y = 0.0)
+     addn.place(x = 425.0, y = 20.0)
+     edit.place(x = 425.0, y = 40.0)
