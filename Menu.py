@@ -3,6 +3,7 @@
 from tkinter import *
 import tkinter as tk
 import Open_Section as os
+import To_do as td
 
 # Create main window
 master = tk.Tk()
@@ -29,5 +30,7 @@ Expences = tk.Button (master, text="Expences", command = lambda:os.open_section(
 Expences.grid(row=6, column=0)
 Passwords = tk.Button (master, text="Passwords", command = lambda:os.open_section(master,"Passwords"), width = 20, bg = 'white', fg = 'black');
 Passwords.grid(row=7, column=0)
+To_do = tk.Button (master, text="To-do List", command = lambda:td.choose_date(master), width = 20, bg = 'white', fg = 'black');
+To_do.grid(row=8, column=0)
 
 master.mainloop()
