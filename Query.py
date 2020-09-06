@@ -21,6 +21,12 @@ def output_table(s, i):
          cursor.execute("SELECT * FROM  Passwords WHERE generated_id = ?",(i,) )
     elif(s == 'House'):
          cursor.execute("SELECT * FROM  House WHERE generated_id = ?",(i,) )
+    elif(s == 'Expences'):
+         cursor.execute("SELECT * FROM  Expences WHERE generated_id = ?",(i,) )
+    elif(s == 'Allowance'):
+         cursor.execute("SELECT * FROM  Allowance WHERE generated_id = ?",(i,) )
+    elif(s == 'Balance'):
+         cursor.execute("SELECT * FROM  Balance WHERE generated_id = ?",(i,) )
     # Get rows from database
     rows=cursor.fetchall()
     # Close database
@@ -50,12 +56,12 @@ def get_row(section, list_box, indexes_list):
 
 def select_name(s):
 
-    #connect to database
+    # Connect to database
     conn = sqlite3.connect('Notes.db')
-    #open cursor
+    # Open cursor
     cursor = conn.cursor()
 
-    #find rows of name and indes from section
+    # Find rows of name and indes from section
     if(s == 'Job'):
         cursor.execute("SELECT generated_id,name FROM Job")
     elif(s == 'FaF'):
@@ -70,6 +76,8 @@ def select_name(s):
           cursor.execute("SELECT generated_id,name FROM Passwords")
     elif(s == 'House'):
           cursor.execute("SELECT generated_id,name FROM House")
+    elif(s == 'Expences'):
+          cursor.execute("SELECT generated_id, date FROM Expences")
     # Get rows
     rows = cursor.fetchall()
     # Close database
