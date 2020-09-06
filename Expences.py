@@ -86,7 +86,7 @@ def new_note (list_box, indexes_list):
 
 
     # Make buttons and setting actions
-    tk.Button(master, text='Quit', command=master.quit).grid(row=10, column=2, sticky=tk.W, pady=4)
+    tk.Button(master, text='Quit', command=master.destroy).grid(row=10, column=2, sticky=tk.W, pady=4)
     tk.Button(master, text='Done', command=lambda:read_input(master, input1, input2, input3, input4, input5, input6, input7, list_box, indexes_list)).grid(row=10, column=3, sticky=tk.W, pady=4)
     
     total=food+clothes+bills+direct_debts+othes+total
