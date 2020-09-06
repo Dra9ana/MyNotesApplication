@@ -1,4 +1,5 @@
 # CREATE A DATABASE
+
 import sqlite3
 
 global id_allowance 
