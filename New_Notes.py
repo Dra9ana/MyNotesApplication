@@ -31,7 +31,9 @@ def new_notes(s, a):
    elif(s == 'House'):
         cursor.execute("INSERT INTO House (Name, Activity, Date, Time, Description) VALUES(?, ?, ?, ?, ?)",
                                                   (a[0], a[1], a[2], a[3], a[4]))
-
+   elif(s == 'Expences'):
+        cursor.execute("INSERT INTO Expences (Date, Incomes, Food, Clothes, Bills, Direct_debts, Other, Total) VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
+                                                  (a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]))
 
    # Get id of last row inserted into database
    id=cursor.lastrowid
