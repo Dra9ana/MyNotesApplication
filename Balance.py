@@ -53,22 +53,3 @@ def output_section(master, list_box, indexes_list):
        l11 = tk.Label(master, text="Other Left:"+s[11], width=20, height=2).grid(row=11, column=2)
        l12 = tk.Label(master, text="Total:"+s[12], width=20, height=2).grid(row=12, column=2)
        l13 = tk.Label(master, text="Left:"+s[13], width=20, height=2).grid(row=13, column=2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
