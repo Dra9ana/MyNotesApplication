@@ -10,6 +10,7 @@ import Query
 
 def balance(old):
     
+    c = sqlite3.connect('Notes.db')
     c.execute('SELECT * FROM Balance')
     expences = c.fetchall()
     
@@ -30,6 +31,9 @@ def balance(old):
     new=[incomes, food, food_left, clothes, clothes_left, bills, bills_left, direct_debts, direct_debts_left, other, other_left, total, left]
     
     #UPDATE BALANCE
+    
+    c.commit()
+    c.close()
     
 
 # Output section after clicking on button
