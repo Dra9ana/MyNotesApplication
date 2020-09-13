@@ -23,10 +23,7 @@ def output_table(s, i):
          cursor.execute("SELECT * FROM  House WHERE generated_id = ?",(i,) )
     elif(s == 'Expences'):
          cursor.execute("SELECT * FROM  Expences WHERE generated_id = ?",(i,) )
-    elif(s == 'Allowance'):
-         cursor.execute("SELECT * FROM  Allowance WHERE generated_id = ?",(i,) )
-    elif(s == 'Balance'):
-         cursor.execute("SELECT * FROM  Balance WHERE generated_id = ?",(i,) )
+   
     # Get rows from database
     rows=cursor.fetchall()
     # Close database
