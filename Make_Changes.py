@@ -55,5 +55,3 @@ def Add_Note(section, list_box, indexes):
            f = House.new_note(list_box, indexes)
     elif(section == 'Expenes'):
            f = Expences.new_note(list_box, indexes)
-    elif(section == 'Allowance'):
-           f = Expences.new_note(list_box, indexes)
