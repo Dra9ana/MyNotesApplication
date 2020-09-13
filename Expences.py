@@ -8,7 +8,6 @@ import tkinter as tk
 import New_Notes
 import sqlite3
 import Query
-import Balance 
 
 # Read input
 def read_input(master, input1, input2, input3, input4, input5, input6, input7, list_box, indexes_list):
@@ -29,6 +28,8 @@ def read_input(master, input1, input2, input3, input4, input5, input6, input7, l
     list_box.insert(tk.END, topic)
     # Store id from database of added note
     indexes_list.append(id)
+    
+    #UPDATE NOTE WITH id_total ID IN THE DATABASE 
     
 
 # Output section after clicking on button
@@ -89,6 +90,4 @@ def new_note (list_box, indexes_list):
     tk.Button(master, text='Quit', command=master.destroy).grid(row=10, column=2, sticky=tk.W, pady=4)
     tk.Button(master, text='Done', command=lambda:read_input(master, input1, input2, input3, input4, input5, input6, input7, list_box, indexes_list)).grid(row=10, column=3, sticky=tk.W, pady=4)
     
-    total=food+clothes+bills+direct_debts+othes+total
-    spent = [incomes, food, clothes, bills, direct_debts, other, total]
-    Balance.balance(spent)
+    
