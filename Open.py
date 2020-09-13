@@ -10,8 +10,6 @@ import Travel
 import Passwords
 import Extracurricular
 import Expences
-import Allowance
-import Balance
 import To_do
 
 # Handle event
@@ -48,10 +46,6 @@ def f(o):
              f = House.output_section(o.master, o.list_box, o.indexes)
       elif(o.section == 'Expences'):
              f = Expences.output_section(o.master, o.list_box, o.indexes)
-      #elif(o.section == 'Allowance'):
-       #      f = Allowance.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'Balance'):
-             f = Balance.output_section(o.master, o.list_box, o.indexes)
       elif(o.section == 'To_do'):
              f = To_do.output_section(o)
 
