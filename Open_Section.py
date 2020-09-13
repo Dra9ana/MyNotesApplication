@@ -41,14 +41,7 @@ def open_section(master, section):
      addn = tk.Button(master, text="New Note",command=lambda:Add_Note(section, list_box, indexes_list),width='12', bg='white', fg='black')
      edit = tk.Button(master, text="Edit",command=lambda:Edit_Note(section, master),width='12', bg='white', fg='black')
      
-     if(section=='Expences'):
-         alw = tk.Button(master, text="Allowance", command=lambda:os.Add_Note("Allowance", list_box, idexes_list), width='12', bg='white', fg='black')
-         bln = tk.Button(master, text="See Balance", command=lambda:os.open_section(master, "Balance"), width='12', bg='white', fg='black')
-         
-         alw.place(x = 425.0, y = 60.0)
-         bln.place(x = 425.0, y = 80.0)
-        
-        
+     
      # Set places for buttons
      deln.place(x = 425.0, y = 0.0)
      addn.place(x = 425.0, y = 20.0)
