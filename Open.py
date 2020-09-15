@@ -55,3 +55,9 @@ def open(section, master, list_box, indexes_list):
          obj = Handler(f, section, master, list_box, indexes_list)
          # Call callback when some listbox item is selected
          list_box.bind('<<ListboxSelect>>', obj.callback)
+         
+def open_to_do(section, master, list_box, indexes_list):
+         # Create new hanler
+         obj = Handler(f, section, master, list_box, indexes_list)
+         # Call callback when some listbox item is selected
+         list_box.bind('<<ListboxSelect>>', obj.callback)
