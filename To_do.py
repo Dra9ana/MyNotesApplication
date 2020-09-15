@@ -57,18 +57,30 @@ def date_notes(main_master, day, month, year):
     # Get rows using cursor
     cur.execute("SELECT * FROM Job WHERE Date = ?",(date,) )
     rows_Job = cur.fetchall()
+    for row in rows_Job: 
+        row_J.append('Job', row)
     cur.execute("SELECT * FROM FaF WHERE Date = ?",(date,) )
     rows_FaF = cur.fetchall()
+    for row in rows_FaF: 
+        row_F.append('FaF', row)
     cur.execute("SELECT * FROM School WHERE Date = ?",(date,) )
     rows_School = cur.fetchall()
+    for row in rows_Job: 
+        row_S.append('School', row)
     cur.execute("SELECT * FROM Travel WHERE Date = ?",(date,) )
     rows_Travel = cur.fetchall()
+    for row in rows_Travel: 
+        row_T.append('Travel', row)
     cur.execute("SELECT * FROM Extracurricular WHERE Date = ?",(date,) )
     rows_Extracurricular = cur.fetchall()
+    for row in rows_Extracurricular: 
+        row_E.append('Extracurricular', row)
     cur.execute("SELECT * FROM House WHERE Date = ?",(date,) )
     rows_House = cur.fetchall()
+    for row in rows_House: 
+        row_J.append('House', row)
     
-    rows = rows_Job+rows_FaF+rows_School+rows_Travel+rows_Extracurricular+rows_House
+    rows = row_J+row_F+row_S+row_T+row_E+row_H
 
     # Commit your changes in the database
     conn.commit()
@@ -83,38 +95,25 @@ def open_notes(main_master, rows):
      indexes_list = []
      # Make listbox
      list_box     = Listbox(main_master, height=13, width=45)
+     sections     = []
 
      # Go through columns
      for row in rows:
            # Put name of note in the list
-           list_box.insert(tk.END, row[1])
+           list_box.insert(tk.END, row[2])
            # Put index from database in list of indexes
-           indexes_list.append(row[0])
+           indexes_list.append(row[1])
+           sections.append(row[0])
 
      # Set position of listbox
      list_box.place(x = 150, y = 0)
      # Enable user to select multiple items
      list_box.config(selectmode = MULTIPLE)
      # Output rows on the main window when item is selected
-     o.open(section, main_master, list_box, indexes_list)
+     o.open_to_do(sections, main_master, list_box, indexes_list)
      # Set first item to be automatically selected
      list_box.select_set(first = 0, last = None)
      list_box.event_generate("<<ListboxSelect>>")
-    
-def output_section(o):
-      if(o.section == 'Job'):
-             f = Job.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'FaF'):
-             f = FaF.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'School'):
-             f = School.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'Travel'):
-             f = Travel.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'Extracurricular'):
-             f = Extracurricular.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'Passwords'):
-             f = Passwords.output_section(o.master, o.list_box, o.indexes)
-      elif(o.section == 'House'):
-             f = House.output_section(o.master, o.list_box, o.indexes)
-    
+     
+
 
